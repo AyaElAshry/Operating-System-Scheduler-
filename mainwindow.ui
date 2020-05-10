@@ -1,0 +1,428 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>988</width>
+    <height>720</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>CPU Scheduler</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout_2">
+    <item row="0" column="2">
+     <widget class="QLabel" name="label_image">
+      <property name="text">
+       <string>TextLabel</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="0" colspan="3">
+     <widget class="QGraphicsView" name="graphicsView"/>
+    </item>
+    <item row="0" column="0" colspan="2">
+     <widget class="QGroupBox" name="groupBox">
+      <property name="enabled">
+       <bool>true</bool>
+      </property>
+      <property name="baseSize">
+       <size>
+        <width>0</width>
+        <height>0</height>
+       </size>
+      </property>
+      <property name="font">
+       <font>
+        <family>Arial Black</family>
+        <pointsize>16</pointsize>
+        <weight>10</weight>
+        <italic>false</italic>
+        <bold>false</bold>
+       </font>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">font: 87 16pt &quot;Arial Black&quot;;
+border-color: rgb(129, 129, 129);
+color: rgb(202, 202, 202);</string>
+      </property>
+      <property name="title">
+       <string>CPU-Scheduler</string>
+      </property>
+      <layout class="QGridLayout" name="gridLayout">
+       <item row="1" column="0">
+        <layout class="QHBoxLayout" name="horizontalLayout_3">
+         <item>
+          <layout class="QVBoxLayout" name="verticalLayout_3">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_4">
+             <item>
+              <widget class="QLabel" name="label_arrival">
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+               </property>
+               <property name="text">
+                <string>Arrival</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox_arrival">
+               <property name="styleSheet">
+                <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_5">
+             <item>
+              <widget class="QLabel" name="label_burst">
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+               </property>
+               <property name="text">
+                <string>Burst</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QDoubleSpinBox" name="doubleSpinBox">
+               <property name="styleSheet">
+                <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_6">
+           <item>
+            <widget class="QLabel" name="label_priority">
+             <property name="styleSheet">
+              <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+             </property>
+             <property name="text">
+              <string>Priority</string>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QSpinBox" name="spinBox_priority">
+             <property name="styleSheet">
+              <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="0" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_5">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout_2">
+             <item>
+              <widget class="QLabel" name="label_num">
+               <property name="styleSheet">
+                <string notr="true">font: 75 18pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+               </property>
+               <property name="text">
+                <string>Number of Process </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_number_of_process">
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <layout class="QVBoxLayout" name="verticalLayout">
+             <item>
+              <widget class="QLabel" name="label_select_mode">
+               <property name="styleSheet">
+                <string notr="true">font: 75 18pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+               </property>
+               <property name="text">
+                <string>Scheduler Type:</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QComboBox" name="comboBox_mode">
+               <property name="font">
+                <font>
+                 <family>Arial</family>
+                 <pointsize>16</pointsize>
+                 <weight>9</weight>
+                 <italic>false</italic>
+                 <bold>false</bold>
+                </font>
+               </property>
+               <property name="autoFillBackground">
+                <bool>true</bool>
+               </property>
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+               <item>
+                <property name="text">
+                 <string>FCFS</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>Priority (preemptive)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>priority (Non-preemptive)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>SJF(preemptive)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>SJF(Non-preemptive)</string>
+                </property>
+               </item>
+               <item>
+                <property name="text">
+                 <string>RR (preemptive)</string>
+                </property>
+               </item>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_9">
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout">
+             <item>
+              <widget class="QLabel" name="label_process_name">
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(138, 138, 138);</string>
+               </property>
+               <property name="text">
+                <string>Name</string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QLineEdit" name="lineEdit_process_name">
+               <property name="styleSheet">
+                <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+           <item>
+            <spacer name="horizontalSpacer_4">
+             <property name="orientation">
+              <enum>Qt::Horizontal</enum>
+             </property>
+             <property name="sizeHint" stdset="0">
+              <size>
+               <width>40</width>
+               <height>20</height>
+              </size>
+             </property>
+            </spacer>
+           </item>
+           <item>
+            <layout class="QHBoxLayout" name="horizontalLayout_8">
+             <item>
+              <widget class="QLabel" name="label_time_slice">
+               <property name="styleSheet">
+                <string notr="true">font: 75 16pt &quot;Arial&quot;;
+color: rgb(129, 129, 129);</string>
+               </property>
+               <property name="text">
+                <string>Time-Slice </string>
+               </property>
+              </widget>
+             </item>
+             <item>
+              <widget class="QSpinBox" name="spinBox_time_slice">
+               <property name="styleSheet">
+                <string notr="true">font: 75 14pt &quot;Arial&quot;;
+color: rgb(0, 0, 0);</string>
+               </property>
+              </widget>
+             </item>
+            </layout>
+           </item>
+          </layout>
+         </item>
+        </layout>
+       </item>
+       <item row="2" column="0">
+        <layout class="QVBoxLayout" name="verticalLayout_4">
+         <item>
+          <layout class="QHBoxLayout" name="horizontalLayout_11">
+           <item>
+            <widget class="QPushButton" name="pushButton">
+             <property name="styleSheet">
+              <string notr="true">font: 87 14pt &quot;Arial Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(12, 132, 68);</string>
+             </property>
+             <property name="text">
+              <string>Draw</string>
+             </property>
+             <property name="icon">
+              <iconset theme="meme">
+               <normaloff>.</normaloff>.</iconset>
+             </property>
+            </widget>
+           </item>
+           <item>
+            <widget class="QPushButton" name="pushButton_2">
+             <property name="styleSheet">
+              <string notr="true">font: 87 14pt &quot;Arial Black&quot;;
+color: rgb(0, 0, 0);
+background-color: rgb(12, 132, 68);</string>
+             </property>
+             <property name="text">
+              <string>Update</string>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pushButton_delete">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(226, 8, 8);
+font: 87 14pt &quot;Arial Black&quot;;
+color: rgb(0, 0, 0);</string>
+           </property>
+           <property name="text">
+            <string>Clear</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QTableWidget" name="table">
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>16</pointsize>
+             <weight>10</weight>
+             <italic>false</italic>
+             <bold>false</bold>
+            </font>
+           </property>
+           <column>
+            <property name="text">
+             <string>Name</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Arrival</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>Burst</string>
+            </property>
+           </column>
+           <column>
+            <property name="text">
+             <string>priority</string>
+            </property>
+           </column>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>988</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <widget class="QMenu" name="menuabout">
+    <property name="title">
+     <string>file</string>
+    </property>
+   </widget>
+   <widget class="QMenu" name="menuabout_us">
+    <property name="title">
+     <string>about</string>
+    </property>
+    <addaction name="actionabout_AAY"/>
+   </widget>
+   <addaction name="menuabout"/>
+   <addaction name="menuabout_us"/>
+  </widget>
+  <action name="actionabout_us">
+   <property name="text">
+    <string>about-us</string>
+   </property>
+  </action>
+  <action name="actionabout_AAY">
+   <property name="text">
+    <string>about-AAY</string>
+   </property>
+  </action>
+ </widget>
+ <tabstops>
+  <tabstop>lineEdit_process_name</tabstop>
+  <tabstop>doubleSpinBox_arrival</tabstop>
+  <tabstop>doubleSpinBox</tabstop>
+  <tabstop>spinBox_priority</tabstop>
+  <tabstop>pushButton_2</tabstop>
+  <tabstop>spinBox_number_of_process</tabstop>
+  <tabstop>pushButton</tabstop>
+  <tabstop>spinBox_time_slice</tabstop>
+  <tabstop>pushButton_delete</tabstop>
+  <tabstop>graphicsView</tabstop>
+  <tabstop>comboBox_mode</tabstop>
+ </tabstops>
+ <resources/>
+ <connections/>
+</ui>
